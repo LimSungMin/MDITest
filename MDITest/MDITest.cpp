@@ -11,7 +11,8 @@
 #include "ChildFrm.h"
 #include "MDITestDoc.h"
 #include "MDITestView.h"
-
+#include "CircleDoc.h"
+#include "CircleView.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -79,7 +80,14 @@ BOOL CMDITestApp::InitInstance()
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
-
+	//CMultiDocTemplate* pDocTemplate;
+	pDocTemplate = new CMultiDocTemplate(IDR_CircleTYPE,
+		RUNTIME_CLASS(CCircleDoc),
+		RUNTIME_CLASS(CChildFrame), // 사용자 지정 cir 자식 프레임입니다.
+		RUNTIME_CLASS(CCircleView));
+	if (!pDocTemplate)
+		return FALSE;
+	AddDocTemplate(pDocTemplate);
 	// 주 MDI 프레임 창을 만듭니다.
 	CMainFrame* pMainFrame = new CMainFrame;
 	if (!pMainFrame || !pMainFrame->LoadFrame(IDR_MAINFRAME))
