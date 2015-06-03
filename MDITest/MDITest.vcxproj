@@ -100,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CircleDoc.h" />
+    <ClInclude Include="CircleView.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MDITest.h" />
     <ClInclude Include="MDITestDoc.h" />
@@ -110,6 +112,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CircleDoc.cpp" />
+    <ClCompile Include="CircleView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MDITest.cpp" />
     <ClCompile Include="MDITestDoc.cpp" />
@@ -127,6 +131,7 @@
     <ResourceCompile Include="MDITest.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\icon1.ico" />
     <Image Include="res\MDITest.ico" />
     <Image Include="res\MDITestDoc.ico" />
     <Image Include="res\Toolbar.bmp" />
